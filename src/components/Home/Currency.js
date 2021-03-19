@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Image, Header } from 'semantic-ui-react'
+import { Card, Image, Header, Icon, Popup } from 'semantic-ui-react'
 
 export default function Currency({ image, name, symbol, price, volume, priceChange, marketcap, rank, }) {
   return (
@@ -8,11 +8,25 @@ export default function Currency({ image, name, symbol, price, volume, priceChan
       <Card inverted>
         <Card.Content>
           <Image floated='left' size='mini' src={image} />
-          <Card.Header style={{ color: 'blue' }}>{name}</Card.Header>
+          <Card.Header style={{ color: 'blue', marginTop: '7px', fontSize: '15px' }}>{symbol.toUpperCase()} / USD</Card.Header>
+          <Card.Header style={{ marginTop: '12px', fontFamily: 'circular, Arial, "Helvetica Neue", Helvetica, sans-serif' }}>${price}</Card.Header>
+          <div style={{ marginTop: '12px' }}>
+            <p style={{ color: 'grey', float: 'left', marginLeft: '5px' }}>Status</p>
+            <p style={{ color: 'grey', float: 'right', marginRight: '23px' }}>Sponsors</p>
+            <br />
+            <br />
+            <Icon name='list' style={{ float: 'right' }} />
+            <Icon name='circle' style={{ float: 'right' }} />
+            <Icon name='circle' style={{ float: 'right' }} />
+            <Icon name='circle' style={{ float: 'right' }} />
+            <Icon style={{ float: 'left' }} name='green large circle check' />
+            <p style={{ fontWeight: 'bold' }}>Active</p>
+
+
+
+          </div>
         </Card.Content>
-
       </Card>
-
     </div>
   )
 }
