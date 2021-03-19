@@ -7,7 +7,7 @@ export default function Currency({ image, name, symbol, price, volume, priceChan
 
       <Card inverted>
         <Card.Content>
-          <Image floated='left' size='mini' src={image} />
+          <Image floated='left' src={image} style={{ height: '28px' }} />
           <Card.Header style={{ color: 'blue', marginTop: '7px', fontSize: '15px' }}>{symbol.toUpperCase()} / USD</Card.Header>
           <Card.Header style={{ marginTop: '12px', fontFamily: 'circular, Arial, "Helvetica Neue", Helvetica, sans-serif' }}>${price}</Card.Header>
           <div style={{ marginTop: '12px' }}>
@@ -15,10 +15,19 @@ export default function Currency({ image, name, symbol, price, volume, priceChan
             <p style={{ color: 'grey', float: 'right', marginRight: '23px' }}>Sponsors</p>
             <br />
             <br />
-            <Icon name='list' style={{ float: 'right' }} />
-            <Icon name='circle' style={{ float: 'right' }} />
-            <Icon name='circle' style={{ float: 'right' }} />
-            <Icon name='circle' style={{ float: 'right' }} />
+            <Popup trigger={<Icon name='list' style={{ float: 'right' }} />}>
+              <ul>
+                <p>Please</p>
+                <p>Hire</p>
+                <p>Me</p>
+                <p>+ 1,000 more sponsors</p>
+              </ul>
+            </Popup>
+            <Popup trigger={<Icon name='circle' style={{ float: 'right' }} />} ><p>I love Chainlink</p></Popup>
+            <Popup trigger={<Icon name='circle' style={{ float: 'right' }} />} ><p>I love Chainlink</p></Popup>
+            <Popup trigger={<Icon name='circle' style={{ float: 'right' }} />} ><p>I love Chainlink</p></Popup>
+
+
             <Icon style={{ float: 'left' }} name='green large circle check' />
             <p style={{ fontWeight: 'bold' }}>Active</p>
 
