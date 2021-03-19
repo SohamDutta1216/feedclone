@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Home from './components/Home/Home'
 import 'semantic-ui-css/semantic.min.css'
+import NavBar from './components/NavBar/NavBar'
+import Chart from './components/Chart/Chart'
+import { Container } from 'semantic-ui-react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 export default function App() {
   const [coins, setCoinData] = useState([])
@@ -20,7 +24,15 @@ export default function App() {
     coin.name.toLowerCase().includes(search.toLowerCase()))
   return (
     <div>
-      <Home setSearch={setSearch} filteredCoins={filteredCoins} />
+      <BrowserRouter>
+        <Container style={{ width: '80%' }}>
+          <NavBar />
+          <Switch>
+            <Route exact path='/' render={() => <Home setSearch={setSearch} filteredCoins={filteredCoins} />} />
+            <Route exact path='/chart' render={() => <Chart />} />
+          </Switch>
+        </Container>
+      </BrowserRouter>
     </div>
   )
 }

@@ -5,7 +5,7 @@ export default function Currency({ image, name, symbol, price, volume, priceChan
   return (
     <div style={{ margin: '20px' }}>
 
-      <Card inverted>
+      <Card>
         <Card.Content>
           <Image floated='left' src={image} style={{ height: '28px' }} />
           <Card.Header style={{ color: 'blue', marginTop: '7px', fontSize: '15px' }}>{symbol.toUpperCase()} / USD</Card.Header>
@@ -29,7 +29,7 @@ export default function Currency({ image, name, symbol, price, volume, priceChan
 
 
             <Icon style={{ float: 'left' }} name='green large circle check' />
-            <p style={{ fontWeight: 'bold' }}>Active</p>
+            <p style={{ fontWeight: 'bold', color: 'black' }}>Active</p>
 
 
 
