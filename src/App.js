@@ -20,7 +20,7 @@ export default function App() {
     coin.name.toLowerCase().includes(search.toLowerCase()))
   return (
     <div>
-      <Home setSearch={setSearch} />
+      <Home setSearch={setSearch} filteredCoins={filteredCoins} />
     </div>
   )
 }
