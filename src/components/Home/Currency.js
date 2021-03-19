@@ -3,7 +3,7 @@ import { Card, Image, Header } from 'semantic-ui-react'
 
 export default function Currency({ image, name, symbol, price, volume, priceChange, marketcap, rank, }) {
   return (
-    <div>
+    <div style={{ margin: '20px' }}>
 
       <Card inverted>
         <Card.Content>

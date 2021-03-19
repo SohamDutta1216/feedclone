@@ -15,24 +15,27 @@ export default function Home({ setSearch, filteredCoins }) {
           <SearchBar handleChange={handleChange} />
         </div>
         <div style={{ marginTop: '50px' }}>
-          <Header as='h2' inverted style={{ marginBottom: '50px' }}>Cryptocurrencies</Header>
-          <Card.Group itemsPerRow={4}>
-            {filteredCoins.map(coin => {
-              return (
-                <Currency
-                  key={coin.id}
-                  name={coin.name}
-                  price={coin.current_price}
-                  symbol={coin.symbol}
-                  marketcap={coin.total_volume}
-                  volume={coin.market_cap}
-                  image={coin.image}
-                  priceChange={coin.price_change_percentage_24h}
-                  rank={coin.market_cap_rank}
-                />
-              )
-            })}
-          </Card.Group>
+
+          <Container style={{ width: '90%' }}>
+            <Header inverted style={{ marginBottom: '30px', fontSize: '35px' }}>Cryptocurrencies</Header>
+            <Card.Group itemsPerRow={4}>
+              {filteredCoins.map(coin => {
+                return (
+                  <Currency
+                    key={coin.id}
+                    name={coin.name}
+                    price={coin.current_price}
+                    symbol={coin.symbol}
+                    marketcap={coin.total_volume}
+                    volume={coin.market_cap}
+                    image={coin.image}
+                    priceChange={coin.price_change_percentage_24h}
+                    rank={coin.market_cap_rank}
+                  />
+                )
+              })}
+            </Card.Group>
+          </Container>
 
 
         </div>
