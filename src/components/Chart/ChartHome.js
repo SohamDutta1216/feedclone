@@ -19,7 +19,7 @@ export default function ChartHome() {
   return (
     <div>
       <Container style={{ marginTop: '100px' }}>
-        <Header inverted><a href='/'>Data / </a></Header>
+        <Header inverted style={{ fontSize: '15px' }}><a href='/'>Data / </a></Header>
         <Header inverted style={{ fontSize: '40px' }}>{coin.toUpperCase()} / USD</Header>
         <Header inverted>Price History</Header>
         <Chart coinData={data} />

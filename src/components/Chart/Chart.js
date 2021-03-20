@@ -21,16 +21,24 @@ export default function Chart({ coinData }) {
     setTimeData(times)
     setPriceData(prices)
   })
+  console.log(priceData)
 
   return (
     <div>
       <Line
         data={{
-          labels: timeData
+          labels: timeData,
+          datasets: [
+            {
+              label: 'USD',
+              data: priceData,
+              borderColor: ['rgb(0, 0, 255)']
+            }
+          ],
 
         }}
-        height={300}
-        width={400}
+        height={100}
+        width={200}
       />
     </div>
   )
