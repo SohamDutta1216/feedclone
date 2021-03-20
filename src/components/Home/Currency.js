@@ -11,8 +11,8 @@ export default function Currency({ image, name, symbol, price, volume, priceChan
           <Card.Header style={{ color: 'blue', marginTop: '7px', fontSize: '15px' }}>{symbol.toUpperCase()} / USD</Card.Header>
           <Card.Header style={{ marginTop: '12px', fontFamily: 'circular, Arial, "Helvetica Neue", Helvetica, sans-serif' }}>${price}</Card.Header>
           <div style={{ marginTop: '12px' }}>
-            <p style={{ color: 'grey', float: 'left', marginLeft: '5px' }}>Status</p>
-            <p style={{ color: 'grey', float: 'right', marginRight: '23px' }}>Sponsors</p>
+            <p style={{ color: 'black', float: 'left', marginLeft: '5px' }}>Status</p>
+            <p style={{ color: 'black', float: 'right', marginRight: '23px' }}>Sponsors</p>
             <br />
             <br />
             <Popup trigger={<Icon name='list' style={{ float: 'right' }} />}>

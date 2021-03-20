@@ -17,7 +17,7 @@ export default function Home({ setSearch, filteredCoins }) {
       </div>
       <div style={{ marginTop: '50px' }}>
 
-        <Container style={{ width: '90%' }}>
+        <Container style={{ width: '80%' }}>
           <Header inverted style={{ marginBottom: '30px', fontSize: '35px' }}>Cryptocurrencies</Header>
           <Card.Group itemsPerRow={4}>
             {filteredCoins.map(coin => {

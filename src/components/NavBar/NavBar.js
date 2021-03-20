@@ -8,11 +8,11 @@ export default function Header() {
       <Menu inverted secondary>
         <Link to='/'>
           <Menu.Item position='left'>
-            <img style={{ width: '140px', marginLeft: '90px' }} src='/chainlink.png' alt='logo' />
+            <img style={{ width: '140px', marginLeft: '100px' }} src='/chainlink.png' alt='logo' />
           </Menu.Item>
         </Link>
         <Menu.Item position='right'>
-          <Button style={{ marginRight: '90px' }} inverted>Request price feed</Button>
+          <Button style={{ marginRight: '100px' }} inverted>Request price feed</Button>
         </Menu.Item>
       </Menu>
 
