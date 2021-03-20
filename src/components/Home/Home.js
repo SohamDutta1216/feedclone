@@ -22,7 +22,9 @@ export default function Home({ setSearch, filteredCoins }) {
           <Card.Group itemsPerRow={4}>
             {filteredCoins.map(coin => {
               return (
-                <Link to='/chart'>
+                <Link to={{
+                  pathname: `/${coin.id}`,
+                }}>
                   <Currency
                     key={coin.id}
                     name={coin.name}

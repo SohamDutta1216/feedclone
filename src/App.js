@@ -29,7 +29,7 @@ export default function App() {
           <NavBar />
           <Switch>
             <Route exact path='/' render={() => <Home setSearch={setSearch} filteredCoins={filteredCoins} />} />
-            <Route exact path='/chart' render={() => <Chart />} />
+            <Route exact path='/:id' render={() => <Chart />} />
           </Switch>
         </Container>
       </BrowserRouter>
