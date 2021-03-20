@@ -1,28 +1,37 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import { Card, Grid, Header, Container } from 'semantic-ui-react'
+import { Line } from 'react-chartjs-2'
 
-export default function Chart() {
-  const [coin, setCoin] = useState('')
-  const [data, setData] = useState([])
+export default function Chart({ coinData }) {
+  console.log(coinData)
+  const [timeData, setTimeData] = useState([])
+  const [priceData, setPriceData] = useState([])
+
   useEffect(() => {
-    const fetchData = async () => {
-      const coinId = window.location.pathname.replace('/', '')
-      setCoin(coinId)
-      const results = await axios.get(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=1`)
-      setData(results.data)
-    }
-    fetchData()
-  }, [])
-  console.log(coin)
-  console.log(data)
+    const times = []
+    const prices = []
+    coinData.map((coin) => {
+      let h = new Date(coin[0]).getHours()
+      let m = new Date(coin[0]).getMinutes()
+      h = (h < 10) ? '0' + h : h;
+      m = (m < 10) ? '0' + m : m;
+      const convertedTime = h + ':' + m;
+      times.push(convertedTime)
+      prices.push(coin[1])
+    })
+    setTimeData(times)
+    setPriceData(prices)
+  })
+
   return (
     <div>
-      <Container style={{ marginTop: '100px' }}>
-        <Header inverted><a href='/'>Data / </a></Header>
-        <Header inverted style={{ fontSize: '40px' }}>{coin.toUpperCase()} / USD</Header>
-        <Header inverted>Price History</Header>
-      </Container>
+      <Line
+        data={{
+          labels: timeData
+
+        }}
+        height={300}
+        width={400}
+      />
     </div>
   )
 }

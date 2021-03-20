@@ -3,7 +3,7 @@ import axios from 'axios'
 import Home from './components/Home/Home'
 import 'semantic-ui-css/semantic.min.css'
 import NavBar from './components/NavBar/NavBar'
-import Chart from './components/Chart/Chart'
+import ChartHome from './components/Chart/ChartHome'
 import { Container } from 'semantic-ui-react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
@@ -29,7 +29,7 @@ export default function App() {
           <NavBar />
           <Switch>
             <Route exact path='/' render={() => <Home setSearch={setSearch} filteredCoins={filteredCoins} />} />
-            <Route exact path='/:id' render={() => <Chart />} />
+            <Route exact path='/:id' render={() => <ChartHome />} />
           </Switch>
         </Container>
       </BrowserRouter>
