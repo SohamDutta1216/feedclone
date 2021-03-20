@@ -12,7 +12,7 @@ export default function App() {
   const [search, setSearch] = useState('')
   const [loading, setLoading] = useState(true)
   useEffect(() => {
-    axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
+    axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10000&page=1&sparkline=false')
       .then(res => {
         setTimeout(() => {
           setLoading(false)
@@ -28,7 +28,7 @@ export default function App() {
         <Container style={{ width: '90%' }}>
           <NavBar />
           <Switch>
-            <Route exact path='/' render={() => <Home setSearch={setSearch} filteredCoins={filteredCoins} />} />
+            <Route exact path='/' render={() => <Home setSearch={setSearch} filteredCoins={filteredCoins} setLoading={setLoading} />} />
             <Route exact path='/:id' render={() => <ChartHome />} />
           </Switch>
         </Container>
