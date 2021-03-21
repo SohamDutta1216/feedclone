@@ -35,10 +35,10 @@ export default function ChartHome() {
           <Chart coinData={data} />
         }
         <Container align="center" style={{ marginTop: '20px' }}>
-          <Button onClick={() => { setDays('1') }}>1 Day</Button>
-          <Button onClick={() => { setDays('7') }}>7 Days</Button>
-          <Button onClick={() => { setDays('30') }}>30 days</Button>
-          <Button onClick={() => { setDays('365') }}>365 Days</Button>
+          <Button style={{ marginTop: '10px' }} onClick={() => { setDays('1') }}>1 Day</Button>
+          <Button style={{ marginTop: '10px' }} onClick={() => { setDays('7') }}>7 Days</Button>
+          <Button style={{ marginTop: '10px' }} onClick={() => { setDays('30') }}>30 days</Button>
+          <Button style={{ marginTop: '10px' }} onClick={() => { setDays('365') }}>365 Days</Button>
 
         </Container>
       </Container>
