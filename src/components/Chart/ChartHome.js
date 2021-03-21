@@ -23,7 +23,7 @@ export default function ChartHome() {
   console.log(data)
   return (
     <div>
-      <Container style={{ marginTop: '100px' }}>
+      <Container style={{ marginTop: '30px' }}>
         <Header inverted style={{ fontSize: '15px' }}><a href='/'>Data / </a></Header>
         <Header inverted style={{ fontSize: '40px' }}>{coin.toUpperCase()} / USD</Header>
         <Header inverted>Price History</Header>
@@ -38,8 +38,6 @@ export default function ChartHome() {
           <Button style={{ marginTop: '10px' }} onClick={() => { setDays('1') }}>1 Day</Button>
           <Button style={{ marginTop: '10px' }} onClick={() => { setDays('7') }}>7 Days</Button>
           <Button style={{ marginTop: '10px' }} onClick={() => { setDays('30') }}>30 days</Button>
-          <Button style={{ marginTop: '10px' }} onClick={() => { setDays('365') }}>365 Days</Button>
-
         </Container>
       </Container>
     </div>

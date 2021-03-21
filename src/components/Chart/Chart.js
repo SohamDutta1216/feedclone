@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { Line } from 'react-chartjs-2'
 
 export default function Chart({ coinData }) {
-  console.log(coinData)
   const [timeData, setTimeData] = useState([])
   const [priceData, setPriceData] = useState([])
 
   useEffect(() => {
     const times = []
     const prices = []
+
     coinData.map((coin) => {
       let h = new Date(coin[0]).getHours()
       let m = new Date(coin[0]).getMinutes()
@@ -21,6 +21,8 @@ export default function Chart({ coinData }) {
     setTimeData(times)
     setPriceData(prices)
   })
+
+
   return (
     <div>
       <Line
@@ -34,8 +36,8 @@ export default function Chart({ coinData }) {
             }
           ],
         }}
-        height={100}
-        width={200}
+        height={250}
+        width={800}
       />
     </div>
   )
