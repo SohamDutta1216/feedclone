@@ -28,7 +28,7 @@ export default function App() {
         <Container style={{ width: '90%' }}>
           <NavBar />
           <Switch>
-            <Route exact path='/' render={() => <Home setSearch={setSearch} filteredCoins={filteredCoins} setLoading={setLoading} />} />
+            <Route exact path='/' render={() => <Home setSearch={setSearch} filteredCoins={filteredCoins} setLoading={setLoading} loading={loading} />} />
             <Route exact path='/:id' render={() => <ChartHome />} />
           </Switch>
         </Container>

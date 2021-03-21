@@ -1,11 +1,11 @@
 import React from 'react'
-import NavBar from '../NavBar/NavBar'
 import SearchBar from '../SearchBar/SearchBar'
 import Currency from './Currency'
-import { Card, Grid, Header, Container } from 'semantic-ui-react'
+import { Card, Header, Container } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
+import { MetroSpinner } from 'react-spinners-kit'
 
-export default function Home({ setSearch, filteredCoins }) {
+export default function Home({ setSearch, filteredCoins, setLoading, loading }) {
   const handleChange = (e) => {
     setSearch(e.target.value)
   }
@@ -17,27 +17,38 @@ export default function Home({ setSearch, filteredCoins }) {
       <div style={{ marginTop: '50px' }}>
         <Container style={{ width: '80%' }}>
           <Header inverted style={{ marginBottom: '30px', fontSize: '35px' }}>Cryptocurrencies</Header>
-          <Card.Group itemsPerRow={4}>
-            {filteredCoins.map(coin => {
-              return (
-                <Link to={{
-                  pathname: `/${coin.id}`,
-                }}>
-                  <Currency
-                    key={coin.id}
-                    name={coin.name}
-                    price={coin.current_price}
-                    symbol={coin.symbol}
-                    marketcap={coin.total_volume}
-                    volume={coin.market_cap}
-                    image={coin.image}
-                    priceChange={coin.price_change_percentage_24h}
-                    rank={coin.market_cap_rank}
-                  />
-                </Link>
-              )
-            })}
-          </Card.Group>
+          {loading ?
+            <Container align="center" style={{ marginTop: '100px' }}>
+              <div><MetroSpinner size={100} color="#0000FF" /></div>
+            </Container>
+            :
+            <div>
+
+              <Card.Group itemsPerRow={4}>
+                {filteredCoins.map(coin => {
+                  return (
+                    <Link to={{
+                      pathname: `/${coin.id}`,
+                    }}>
+                      <Currency
+                        key={coin.id}
+                        name={coin.name}
+                        price={coin.current_price}
+                        symbol={coin.symbol}
+                        marketcap={coin.total_volume}
+                        volume={coin.market_cap}
+                        image={coin.image}
+                        priceChange={coin.price_change_percentage_24h}
+                        rank={coin.market_cap_rank}
+                      />
+                    </Link>
+                  )
+                })}
+
+              </Card.Group>
+
+            </div>
+          }
         </Container>
       </div>
     </div>
