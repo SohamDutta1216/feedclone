@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export default function Header() {
   return (
     <div style={{ marginTop: '20px' }}>
-      <Container style={{ width: '86%' }}>
+      <Container style={{ width: '100%' }}>
         <Menu inverted secondary>
           <Link to='/'>
             <Menu.Item position='left'>
