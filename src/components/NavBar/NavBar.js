@@ -1,21 +1,22 @@
 import React from 'react'
-import { Menu, Segment, Button } from 'semantic-ui-react'
+import { Menu, Container, Button } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
     <div style={{ marginTop: '20px' }}>
-      <Menu inverted secondary>
-        <Link to='/'>
-          <Menu.Item position='left'>
-            <img style={{ width: '140px' }} src='/chainlink.png' alt='logo' />
+      <Container style={{ width: '86%' }}>
+        <Menu inverted secondary>
+          <Link to='/'>
+            <Menu.Item position='left'>
+              <img style={{ width: '120px' }} src='/chainlink.png' alt='logo' />
+            </Menu.Item>
+          </Link>
+          <Menu.Item position='right'>
+            <Button inverted>Request price feed</Button>
           </Menu.Item>
-        </Link>
-        <Menu.Item position='right'>
-          <Button inverted>Request price feed</Button>
-        </Menu.Item>
-      </Menu>
-
+        </Menu>
+      </Container>
     </div>
   )
 }
