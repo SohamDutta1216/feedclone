@@ -36,8 +36,8 @@ export default function Chart({ coinData }) {
             }
           ],
         }}
-        height={250}
-        width={800}
+        height={450}
+        width={1000}
       />
     </div>
   )
