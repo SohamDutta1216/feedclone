@@ -11,12 +11,10 @@ export default function Home({ setSearch, filteredCoins }) {
   }
   return (
     <div>
-
       <div>
         <SearchBar handleChange={handleChange} />
       </div>
       <div style={{ marginTop: '50px' }}>
-
         <Container style={{ width: '80%' }}>
           <Header inverted style={{ marginBottom: '30px', fontSize: '35px' }}>Cryptocurrencies</Header>
           <Card.Group itemsPerRow={4}>
@@ -41,8 +39,6 @@ export default function Home({ setSearch, filteredCoins }) {
             })}
           </Card.Group>
         </Container>
-
-
       </div>
     </div>
   )

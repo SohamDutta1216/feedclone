@@ -15,7 +15,6 @@ export default function Header() {
           <Button style={{ marginRight: '100px' }} inverted>Request price feed</Button>
         </Menu.Item>
       </Menu>
-
     </div>
   )
 }

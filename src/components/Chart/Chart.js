@@ -21,8 +21,6 @@ export default function Chart({ coinData }) {
     setTimeData(times)
     setPriceData(prices)
   })
-  console.log(priceData)
-
   return (
     <div>
       <Line
@@ -35,7 +33,6 @@ export default function Chart({ coinData }) {
               borderColor: ['rgb(0, 0, 255)']
             }
           ],
-
         }}
         height={100}
         width={200}

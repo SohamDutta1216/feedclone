@@ -1,10 +1,9 @@
 import React from 'react'
 import { Card, Image, Header, Icon, Popup } from 'semantic-ui-react'
 
-export default function Currency({ image, name, symbol, price, volume, priceChange, marketcap, rank, }) {
+export default function Currency({ image, symbol, price }) {
   return (
     <div style={{ margin: '20px' }}>
-
       <Card>
         <Card.Content>
           <Image floated='left' src={image} style={{ height: '28px' }} />
@@ -26,13 +25,8 @@ export default function Currency({ image, name, symbol, price, volume, priceChan
             <Popup trigger={<Icon name='circle' style={{ float: 'right' }} />} ><p>I love Chainlink</p></Popup>
             <Popup trigger={<Icon name='circle' style={{ float: 'right' }} />} ><p>I love Chainlink</p></Popup>
             <Popup trigger={<Icon name='circle' style={{ float: 'right' }} />} ><p>I love Chainlink</p></Popup>
-
-
             <Icon style={{ float: 'left' }} name='green large circle check' />
             <p style={{ fontWeight: 'bold', color: 'black' }}>Active</p>
-
-
-
           </div>
         </Card.Content>
       </Card>
