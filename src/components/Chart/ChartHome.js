@@ -25,8 +25,8 @@ export default function ChartHome() {
     <div>
       <Container style={{ marginTop: '30px' }}>
         <Header inverted style={{ fontSize: '15px' }}><a href='/'>Data / </a></Header>
-        <Header inverted style={{ fontSize: '40px' }}>{coin.toUpperCase()} / USD</Header>
-        <Header inverted>Price History</Header>
+        <Header style={{ fontSize: '40px', color: '#95b9e5' }}>{coin.toUpperCase()} / USD</Header>
+        <Header style={{ color: '#bab4ab' }}>Price History</Header>
         {loading ?
           <Container align="center" style={{ marginTop: '100px' }}>
             <div><MetroSpinner size={100} color="#0000FF" /></div>

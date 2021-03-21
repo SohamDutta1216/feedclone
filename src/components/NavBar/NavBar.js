@@ -9,11 +9,11 @@ export default function Header() {
         <Menu inverted secondary>
           <Link to='/'>
             <Menu.Item position='left'>
-              <img style={{ width: '120px' }} src='/chainlink.png' alt='logo' />
+              <img style={{ width: '140px' }} src='/chainlink2.png' alt='logo' />
             </Menu.Item>
           </Link>
           <Menu.Item position='right'>
-            <Button inverted>Request price feed</Button>
+            <Button basic color='blue'>Request price feed</Button>
           </Menu.Item>
         </Menu>
       </Container>

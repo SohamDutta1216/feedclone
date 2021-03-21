@@ -16,7 +16,7 @@ export default function Home({ setSearch, filteredCoins, setLoading, loading }) 
       </div>
       <div style={{ marginTop: '50px' }}>
         <Container style={{ width: '90%' }}>
-          <Header inverted style={{ marginBottom: '30px', fontSize: '35px' }}>Cryptocurrencies</Header>
+          <Header inverted style={{ marginBottom: '30px', fontSize: '35px', color: '#95b9e5' }}>Cryptocurrencies</Header>
           {loading ?
             <Container align="center" style={{ marginTop: '100px' }}>
               <div><MetroSpinner size={100} color="#0000FF" /></div>

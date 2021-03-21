@@ -30,6 +30,7 @@ export default function Chart({ coinData }) {
           labels: timeData,
           datasets: [
             {
+
               label: 'USD',
               data: priceData,
               borderColor: ['rgb(0, 0, 255)']
